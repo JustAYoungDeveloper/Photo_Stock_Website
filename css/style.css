@@ -518,7 +518,8 @@ button:disabled {
   z-index: 5;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 200ms var(--motion-easing-standard), visibility 0ms 200ms;
+  transition: var(--motion-duration-short-2) var(--motion-easing-standard);
+  transition-property: opacity, visibility;
 }
 
 .search-view.show {
@@ -534,11 +535,32 @@ button:disabled {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 16px; /* Increased for better spacing */
+  padding-inline: 4px; /* Increased for better spacing */
   height: 72px;
   border-block-end: 1px solid var(--outline);
 }
 
+.search-bar .icon-btn { flex-shrink: 0;}
+
+.input-field { color: var(--on-surface);}
+
+.input-wrapper { flex-grow: 1;}
+
+.input-field,
+.input-wrapper { height: 100%;}
+
+.input-field::placeholder { color: var(--on-surface-variant);}
+
+.input-field::-webkit-search-cancel-button { display: none;}
+
+.input-wrapper:has(:placeholder-shown) + .icon-btn {display: none;}
+
+.search-bar .search-btn {
+  --state-layer-bg: var(--primary);
+  color: var(--primary);
+}
+
+.search-view-content .btn-group { margin: 16px;}
 
 /**
  * List
@@ -578,16 +600,22 @@ button:disabled {
 \*-----------------------------------*/
 
 /* Top App Bar */
+
+/*  */
+.top-app-bar {
+  visibility: hidden;
+}
+/*  */
 .top-app-bar {
   background-color: var(--surface);
   display: flex;
   align-items: center;
-  padding-inline: 8px;
+  padding-inline: 4px;
   height: var(--top-app-bar-height);
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 4;
   transition: background-color var(--motion-duration-short-2) var(--motion-easing-linear);
 }
 
@@ -596,7 +624,7 @@ button:disabled {
 }
 
 .top-app-bar .logo {
-  margin-inline: 8px auto;
+  margin-inline: 4px auto;
 }
 
 /* Theme Button Icons */
@@ -606,7 +634,7 @@ button:disabled {
 }
 
 /* Margin adjustments for content */
-.search-view-content, .divider {
+.search-view-content .divider {
   margin-inline: 16px;
 }
 

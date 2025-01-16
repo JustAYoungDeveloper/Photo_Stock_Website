@@ -54,9 +54,8 @@
 
         <a href="/" class="logo">PixStock</a>
         
-        
                             <!--Insert 'show' over here right infront of search-view and a space after  -->
-        <div class="search-view" data-search-view>
+        <div class="search-view show" data-search-view>
             
             <div class="search-bar">
                 <button class="icon-btn search-open" aria-label="Close search" data-search-toggler data-ripple>
@@ -68,12 +67,15 @@
                 </button>
 
                 <div class="input-wrapper">
+
                     <span class="material-symbols-outlined leading-icon" aria-hidden="true">search</span>
+                    
                     <input type="search" name="search" placeholder="Search..." class="input-field body-large"
                      autocomplete="off" data-search-field>
+                
                 </div>
 
-                <button class="icon-btn" aria-label="Clear search" data-ripple>
+                <button class="icon-btn" aria-label="Clear search" data-search-clear-btn data-ripple>
                     
                     <span class="material-symbols-outlined" aria-hidden="true">close</span>
                     
@@ -96,7 +98,7 @@
 
                 <div class="btn-group" data-segment="search">
 
-                    <button class="btn-segment selected" data-ripple data-segment-btn data-segment-values="photos">
+                    <button class="btn-segment selected" data-ripple data-segment-btn data-segment-value="photos">
 
                         <span class="material-symbols-outlined" aria-hidden="true">image</span>
 
@@ -105,7 +107,7 @@
                         <div class="state-layer"></div>
                     </button>
 
-                    <button class="btn-segment selected" data-ripple data-segment-btn data-segment-values="videos">
+                    <button class="btn-segment selected" data-ripple data-segment-btn data-segment-value="videos">
 
                         <span class="material-symbols-outlined" aria-hidden="true">videocam</span>
 
@@ -119,16 +121,6 @@
                 <div class="divider"></div>
 
                 <div class="list" data-search-list>
-
-                    <button class="list-item" data-ripple>
-
-                        <span class="material-symbols-outlined leading-icon" aria-hidden="true">history</span>
-
-                        <span class="body-large text">Nature</span>
-
-                        <div class="state-layer"></div>
-
-                    </button>
 
                     <button class="list-item" data-ripple>
 
